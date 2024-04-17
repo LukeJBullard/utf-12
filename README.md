@@ -9,6 +9,16 @@ Ensure that inputs are big-endian.
 
 Encodes unicode characters 07c0-D7ff, e000-10ffff
 
+## Install
+    pip install utf12
+
+## Usage
+
+
+    from utf12 import encode, decode
+    encoded_bytes = encode("R2-D2")
+    print(decode(encoded_bytes))
+
 ### encode(unicode_characters)
 unicode_characters is a python string of unicode characters
 Returns a bytes object of the slabs with trailing 0 bits on the last byte if needed

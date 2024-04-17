@@ -3,8 +3,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "utf-12"
-version = "0.0.1"
+name = "utf12"
+version = "1.0.0"
 authors = [
     { name="Luke Bullard", email="2201010+LukeJBullard@users.noreply.github.com" }
 ]
@@ -16,7 +16,13 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+    "bitstring"
+]
 
 [project.urls]
 Homepage = "https://github.com/lukejbullard/utf-12"
 Issues = "https://github.com/lukejbullard/utf-12/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/utf12"]
